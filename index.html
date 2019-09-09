@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-12/css/all.min.css"
         integrity="sha256-cC4ByuxbguozEVx8jcKy94MFiGvxN9GwjCqZ8f3+yBk=" crossorigin="anonymous" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/media.css" />
 
@@ -20,26 +22,28 @@
         <div class="jk-nav-btn-wrap">
             <div class="jk-hamburger-icon"></div>
         </div>
-        <div class="jk-bg">
+        <!-- <div class="jk-bg">
             <img src="assets/img/bg.jpg" class="jk-img-fluid fluid-full" />
-        </div>
+        </div> -->
         <nav class="jk-nav">
             <ul>
 
             </ul>
         </nav>
         <div class="jk-blank">
-            <div class="jk-anim-gray">
-                <div class="jk-left"></div>
-                <div class="jk-center">
-                    <div class="jk-center-active"></div>
-                </div>
-                <div class="jk-right"></div>
-            </div>
+        </div>
+        <div class="jk-progress">
+            <div class="fill"></div>
         </div>
         <section id="content" class="jk-content" style="justify-content: center;">
             <div id="realContent" class="jk-content-wrap">
-                <div class="jk-loader"></div>
+
+            </div>
+            <div class="jk-scroll-indicator">
+                <div class="jk-arrow"></div>
+                <div class="jk-dot"><img src="assets/img/mouse.png" class="scroll-icon" /></div>
+                <!-- <div class="jk-dot jk-del-1"></div>
+                <div class="jk-dot jk-del-2"></div> -->
             </div>
         </section>
     </div>
@@ -47,6 +51,7 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="assets/js/nav.js"></script>
     <script src="assets/js/oop_nav.js"></script>
+    <script src="assets/js/scroll.js"></script>
 </body>
 
 </html>
