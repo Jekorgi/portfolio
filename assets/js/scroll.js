@@ -4,7 +4,7 @@ $(".jk-content").scroll(function () {
 function adjustScroll() {
     var scr = Math.floor($(".jk-content").scrollTop());
     var wh = $(window).height();
-    var dh = ($("#realContent").outerHeight()) + 40;
+    var dh = ($("#realContent").outerHeight());
     var val = dh - wh;
     if (val > 60) {
         $(".jk-progress").css("top", "0");
@@ -22,5 +22,8 @@ function adjustScroll() {
     $(".fill").css("width", scrolled + "vw");
 }
 $(".jk-scroll-indicator").click(function () {
-    $(".jk-content").scrollTop(0);
+    $(".jk-content").animate({
+        scrollTop: 0
+    }, 700);
 })
+//scrollTop(0);

@@ -27,6 +27,7 @@ var localCache = {
 function Nav() {
     // Variables =================================
     this.options = [];
+    this.routes = [];
     this.selector;
     this.click;
     this.mobileCap = "992";
@@ -182,12 +183,23 @@ function registerEvents_g() {
     })
 }
 $(document).ready(function () {
-    loadPage("components/main.html", "main");
+    //First page to load
+    var firstPage = "main";
+    ////////////////////
+    navbar.initMobileView();
+    navbar.checkScreenWidth();
+    if (navbar.getMobileView()) {
+        navbar.toggleMenu();
+    }
+    loadPage("components/" + firstPage + ".html", firstPage);
+    navbar.setActive(firstPage)
 })
 function loadPage(url, raw) {
     if (navbar.getActive() == raw) {
         return false;
     } else {
+        var url = url;
+        var raw = raw;
         $(".jk-content").scrollTop(0);
         $.ajax({
             url: url,
@@ -224,8 +236,7 @@ navbar.addItem("main", "Główna", "home");
 navbar.addItem("about", "O mnie", "user-circle");
 navbar.addItem("portfolio", "Portfolio", "briefcase");
 navbar.addItem("skills", "Umiejętności", "chart-pie");
-navbar.addItem("experience", "Doświadczenie", "star");
 navbar.addItem("contact", "Kontakt", "id-card-alt");
 navbar.addItem("close", "Zamknij", "none", true);
-console.log(navbar.getItem("main"));
 registerEvents_g();
+navbar.routes = navbar.options;
